@@ -69,7 +69,7 @@ $addr = $_POST['modioAddr'];
 
 echo "<P> Port mask: ".$cmd."</p>";
 $dec = bindec($cmd);
-exec("modio w ".$addr." 0x10 ".$dec);
+exec("./mod-io -relay ".$addr." ".$dec);
 echo "<p>I2C Address is :".$addr."</p>";
 echo "<hr>";
 }
